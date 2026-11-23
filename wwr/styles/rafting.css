@@ -18,11 +18,25 @@ body {
     color: var(--accent1-color);
 }
 
-header,
-main,
-footer {
+main {
     width: 840px;
     margin: 0 auto;
+}
+
+header {
+    width: 840px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    justify-self: center;
 }
 
 h1,
@@ -37,6 +51,27 @@ section,
 article {
     margin: 16px;
     padding: 8px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    background-color: #ffffff;
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid var(--accent1-color);
+    font-weight: bold;
+}
+
+header nav a:hover {
+    background-color: var(--accent2-color);
 }
 
 .socialmedia a {
@@ -67,7 +102,6 @@ h1 {
 .hero article img {
     float: right;
     width: 109px;
-
 }
 
 .hero article {
@@ -87,49 +121,6 @@ h2 {
     text-align: center;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
-}
-
-footer {
-    border-top: 2px solid var(--accent1-color);
-    margin-top: 20px;
-    padding-top: 15px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-}
-
-header img {
-    width: 100px;
-    height: auto;
-    justify-self: center;
-}
-
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-header nav a {
-    background-color: #ffffff;
-    color: var(--accent1-color);
-    text-decoration: none;
-    padding: 8px 16px;
-    border: 1px solid var(--accent1-color);
-    font-weight: bold;
-}
-
-header nav a:hover {
-    background-color: var(--accent2-color);
 }
 
 .history {
@@ -199,9 +190,13 @@ header nav a:hover {
 }
 
 footer {
+    width: 840px;
+    margin: 20px auto 0 auto;
+    border-top: 2px solid var(--accent1-color);
+    padding: 15px 16px;
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 15px 16px;
+    align-items: center;
 }
 
 footer p {
